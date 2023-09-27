@@ -55,10 +55,9 @@ public class BookManagement {
                     break;
                 case 3:
                     for (int i = 0; i < currentIndex - 1; i++) {
-                        for (int j = i+1; j < currentIndex - 1; j++) {
+                        for (int j = i+1; j < currentIndex; j++) {
                             if (books[i].getInterest() > books[j].getInterest()) {
-                                Book temp = new Book();
-                                temp =  books[i];
+                                Book temp =  books[i];
                                 books[i] = books[j];
                                 books[j] = temp;
                             }
