@@ -35,17 +35,22 @@ public class BookManagement {
 
             switch (chon) {
                 case 1:
-                    System.out.println("Nhập số sách cần nhập:");
-                    int n = ScannerUtils.inputInteger(scanner);
+                    if(currentIndex < 100) {
+                        System.out.println("Nhập số sách cần nhập:");
+                        int n = ScannerUtils.inputInteger(scanner);
 
-                    for (int i = 0; i < n; i++) {
-                        Book book = new Book();
-                        book.inputData(scanner);
-                        books[currentIndex] = book;
-                        currentIndex++;
+                        for (int i = 0; i < n; i++) {
+                            Book book = new Book();
+                            book.inputData(scanner);
+                            books[currentIndex] = book;
+                            currentIndex++;
+                        }
+
+                        System.out.println("Nhập thông tin sách thành công!");
+                    }else {
+                        System.out.println("Danh sách thư viện đã đầy");
                     }
 
-                    System.out.println("Nhập thông tin sách thành công!");
                     break;
                 case 2:
                     System.out.println("Hiển thị thông tin tất cả sách trong thư viện");
