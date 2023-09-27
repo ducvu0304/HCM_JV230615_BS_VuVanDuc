@@ -193,8 +193,8 @@ public class BookManagement {
 
                     break;
                 case 7:
+                    scanner.close();
                     System.exit(0);
-                    break;
                 default:
                     System.out.println("****************");
                     System.out.printf("Chức năng %d không có\n", chon);
