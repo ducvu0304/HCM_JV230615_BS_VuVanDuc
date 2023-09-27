@@ -5,7 +5,7 @@ import ra.utils.ScannerUtils;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
+
 
 public class BookManagement {
     public static void main(String[] args) {
@@ -54,7 +54,7 @@ public class BookManagement {
                     }
                     break;
                 case 3:
-                    for (int i = 0; i < currentIndex - 1; i++) {
+                    for (int i = 0; i < currentIndex-1; i++) {
                         for (int j = i+1; j < currentIndex; j++) {
                             if (books[i].getInterest() > books[j].getInterest()) {
                                 Book temp =  books[i];
